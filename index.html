@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clingio Outlet | Moda Masculina</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+
+        <a href="#inicio" class="logo">
+            CLINGIO <span>OUTLET</span>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="botao-carrinho" onclick="abrirCarrinho()">
+            🛒
+            <span id="quantidade-carrinho">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+        <!-- =========================
+             BANNER PRINCIPAL
+        ========================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-conteudo">
+
+                <p class="hero-mini">
+                    MODA MASCULINA
+                </p>
+
+                <h1>
+                    Seu estilo.<br>
+                    Sua identidade.
+                </h1>
+
+                <p class="hero-texto">
+                    Encontre peças que combinam com
+                    seu estilo, sua personalidade e
+                    todos os momentos.
+                </p>
+
+                <a href="#produtos" class="botao">
+                    VER PRODUTOS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUTOS
+        ========================== -->
+
+        <section id="produtos" class="produtos">
+
+            <div class="titulo-secao">
+
+                <p>NOSSA COLEÇÃO</p>
+
+                <h2>
+                    Moda masculina
+                </h2>
+
+            </div>
+
+
+            <!-- PESQUISA -->
+
+            <div class="area-pesquisa">
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Pesquisar produto..."
+                    oninput="pesquisarProdutos()"
+                >
+
+            </div>
+
+
+            <!-- CATEGORIAS -->
+
+            <div class="categorias">
+
+                <button
+                    class="categoria ativa"
+                    onclick="filtrarProdutos('todos', this)"
+                >
+                    Todos
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarProdutos('camisetas', this)"
+                >
+                    Camisetas
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarProdutos('camisas', this)"
+                >
+                    Camisas
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarProdutos('calcas', this)"
+                >
+                    Calças
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarProdutos('bermudas', this)"
+                >
+                    Bermudas
+                </button>
+
+                <button
+                    class="categoria"
+                    onclick="filtrarProdutos('calcados', this)"
+                >
+                    Calçados
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 LISTA DE PRODUTOS
+            ========================== -->
+
+            <div class="produtos-container">
+
+
+                <!-- PRODUTO 1 -->
+
+                <div
+                    class="produto"
+                    data-categoria="camisetas"
+                    data-nome="Camiseta Masculina Básica"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=85"
+                            alt="Camiseta masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CAMISETAS
+                        </span>
+
+                        <h3>
+                            Camiseta Masculina Básica
+                        </h3>
+
+                        <p class="preco">
+                            R$ 49,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Camiseta Masculina Básica', 49.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+
+                <div
+                    class="produto"
+                    data-categoria="camisas"
+                    data-nome="Camisa Masculina Social"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=85"
+                            alt="Camisa masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CAMISAS
+                        </span>
+
+                        <h3>
+                            Camisa Masculina Social
+                        </h3>
+
+                        <p class="preco">
+                            R$ 79,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Camisa Masculina Social', 79.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+
+                <div
+                    class="produto"
+                    data-categoria="calcas"
+                    data-nome="Calça Jeans Masculina"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=85"
+                            alt="Calça jeans masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CALÇAS
+                        </span>
+
+                        <h3>
+                            Calça Jeans Masculina
+                        </h3>
+
+                        <p class="preco">
+                            R$ 119,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Calça Jeans Masculina', 119.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 4 -->
+
+                <div
+                    class="produto"
+                    data-categoria="bermudas"
+                    data-nome="Bermuda Masculina"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=800&q=85"
+                            alt="Bermuda masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            BERMUDAS
+                        </span>
+
+                        <h3>
+                            Bermuda Masculina
+                        </h3>
+
+                        <p class="preco">
+                            R$ 69,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Bermuda Masculina', 69.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 5 -->
+
+                <div
+                    class="produto"
+                    data-categoria="camisetas"
+                    data-nome="Camiseta Oversized Masculina"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=800&q=85"
+                            alt="Camiseta oversized masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CAMISETAS
+                        </span>
+
+                        <h3>
+                            Camiseta Oversized Masculina
+                        </h3>
+
+                        <p class="preco">
+                            R$ 59,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Camiseta Oversized Masculina', 59.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 6 -->
+
+                <div
+                    class="produto"
+                    data-categoria="camisas"
+                    data-nome="Camisa Masculina Casual"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=85"
+                            alt="Camisa masculina casual"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CAMISAS
+                        </span>
+
+                        <h3>
+                            Camisa Masculina Casual
+                        </h3>
+
+                        <p class="preco">
+                            R$ 89,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Camisa Masculina Casual', 89.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 7 -->
+
+                <div
+                    class="produto"
+                    data-categoria="calcas"
+                    data-nome="Calça Cargo Masculina"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=85"
+                            alt="Calça cargo masculina"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CALÇAS
+                        </span>
+
+                        <h3>
+                            Calça Cargo Masculina
+                        </h3>
+
+                        <p class="preco">
+                            R$ 129,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Calça Cargo Masculina', 129.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 8 -->
+
+                <div
+                    class="produto"
+                    data-categoria="calcados"
+                    data-nome="Tênis Masculino Casual"
+                >
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85"
+                            alt="Tênis masculino casual"
+                        >
+
+                        <button
+                            class="favorito"
+                            onclick="adicionarFavorito(this)"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="produto-info">
+
+                        <span class="categoria-produto">
+                            CALÇADOS
+                        </span>
+
+                        <h3>
+                            Tênis Masculino Casual
+                        </h3>
+
+                        <p class="preco">
+                            R$ 149,90
+                        </p>
+
+                        <button
+                            class="botao-comprar"
+                            onclick="adicionarCarrinho('Tênis Masculino Casual', 149.90)"
+                        >
+                            ADICIONAR AO CARRINHO
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE NÓS
+        ========================== -->
+
+        <section id="sobre" class="sobre">
+
+            <div class="titulo-secao">
+
+                <p>SOBRE NÓS</p>
+
+                <h2>
+                    Estilo que representa você
+                </h2>
+
+            </div>
+
+            <p>
+                A Clingio Outlet nasceu para trazer
+                moda masculina com estilo, qualidade
+                e personalidade para todos os momentos.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CONTATO
+        ========================== -->
+
+        <section id="contato" class="contato">
+
+            <div class="titulo-secao">
+
+                <p>FALE CONOSCO</p>
+
+                <h2>
+                    Entre em contato
+                </h2>
+
+            </div>
+
+
+            <div class="contatos">
+
+                <a
+                    href="https://tr.ee/instagram-outlet"
+                    target="_blank"
+                    class="contato-card"
+                >
+
+                    <h3>
+                        Instagram
+                    </h3>
+
+                    <p>
+                        Siga a Clingio Outlet
+                    </p>
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/5511960299105"
+                    target="_blank"
+                    class="contato-card"
+                >
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        Fale conosco
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FUNDO DO CARRINHO
+    ========================== -->
+
+    <div
+        id="fundo-carrinho"
+        class="fundo-carrinho"
+        onclick="fecharCarrinho()"
+    ></div>
+
+
+    <!-- =========================
+         CARRINHO
+    ========================== -->
+
+    <aside
+        id="carrinho"
+        class="carrinho"
+    >
+
+        <div class="cabecalho-carrinho">
+
+            <h2>
+                Seu carrinho
+            </h2>
+
+            <button
+                onclick="fecharCarrinho()"
+                class="fechar-carrinho"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="lista-carrinho"
+            class="lista-carrinho"
+        >
+        </div>
+
+
+        <div class="rodape-carrinho">
+
+            <div class="total-carrinho">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong id="total-carrinho">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="finalizar-compra"
+                onclick="finalizarCompra()"
+            >
+                FINALIZAR PEDIDO
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
